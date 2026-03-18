@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashvests | Institutional Trading & Investment</title>
+    <meta name="description" content="Access 4,000+ global assets. Elite trading for Forex, Crypto, and Stocks.">
+    
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W77QRSGV52"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-W77QRSGV52');
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            dark: '#050505',
+                            accent: '#10B981',
+                            surface: '#0F0F0F',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            overflow-x: hidden !important;
+            width: 100vw;
+        }
+        section {
+            overflow-x: hidden !important;
+        }
+        .stats-bar {
+            max-width: calc(100vw - 32px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, rgba(5, 5, 5, 1) 70%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .video-container video {
+            filter: brightness(0.4) contrast(1.2);
+        }
+        /* Removed collective pointer-events restriction to avoid interference with plugins */
+        /* Force Tawk.to visibility */
+        #tawkchat-container, .tawk-main-container, [id^="tawk"] {
+            z-index: 999999 !important;
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999999;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%; /* Ensure perfectly circular */
+            overflow: hidden; /* Remove square background corners */
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: whatsapp-glow 2s infinite;
+        }
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* Mask the image itself */
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.15) translateY(-5px);
+        }
+        @keyframes whatsapp-glow {
+            0% { filter: drop-shadow(0 0 0 rgba(37, 211, 102, 0.4)); }
+            70% { filter: drop-shadow(0 0 15px rgba(37, 211, 102, 0.4)); }
+            100% { filter: drop-shadow(0 0 0 rgba(37, 211, 102, 0.4)); }
+        }
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 80px;
+                left: 20px;
+                width: 55px;
+                height: 55px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-white overflow-x-hidden selection:bg-brand-gold selection:text-black">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/447988566380" target="_blank" class="whatsapp-float group" title="Chat with Us on WhatsApp">
+        <img src="assets/whatsapp_3d.png" alt="WhatsApp">
+    </a>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero.png" alt="Market Grid" class="w-full h-full object-cover opacity-30 scale-110">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center pt-32 pb-40">
+            <div data-aos="fade-down" class="inline-flex items-center space-x-2 px-4 py-1 mb-8 rounded-full glass border border-brand-gold/30 text-brand-gold text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] animate-pulse-slow">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-gold"></span>
+                </span>
+                <span>Institutional Grade Technology</span>
+            </div>
+            
+            <h1 data-aos="zoom-out-up" data-aos-delay="200" class="text-6xl md:text-9xl font-bold tracking-tighter mb-8 leading-[0.9] text-glow">
+                Trade The <br> <span class="bg-clip-text text-transparent bg-gradient-to-b from-brand-gold to-yellow-100">Absolute Edge</span>
+            </h1>
+            
+            <p data-aos="fade-up" data-aos-delay="400" class="max-w-2xl mx-auto text-lg md:text-2xl text-gray-400 mb-12 font-light leading-relaxed">
+                Connect to 4,000+ global assets. Experience high-speed execution, deep liquidity, and unmatched security on the world's most sophisticated trading platform.
+            </p>
+            
+            <div data-aos="fade-up" data-aos-delay="600" class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="https://hashvests.com/register" target="_blank" class="w-full sm:w-auto px-12 py-5 bg-brand-gold text-black rounded-full font-bold text-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(212,175,55,0.2)]">Open Account Now</a>
+                <a href="https://t.me/hashvests_inc" target="_blank" class="w-full sm:w-auto px-12 py-5 glass rounded-full font-bold text-xl hover:bg-white/5 transition flex items-center justify-center border border-white/10">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.91-1.27 4.85-2.11 5.81-2.52 2.77-1.18 3.34-1.39 3.72-1.39.08 0 .27.02.39.12.1.08.13.19.14.27.01.06.01.24 0 .38z"/></svg>
+                    Join VIP Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="relative z-20 -mt-12 md:-mt-16 max-w-6xl mx-auto px-4 overflow-hidden">
+        <div data-aos="flip-up" class="glass rounded-3xl py-8 px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 items-center border border-white/10 shadow-2xl backdrop-blur-2xl">
+            <div class="text-center">
+                <div class="text-2xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-gold to-white">$91.4M+</div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2 px-1">Volume Traded</div>
+            </div>
+            <div class="text-center border-l border-white/5 md:border-l-0">
+                <div class="text-2xl sm:text-4xl font-bold">49.6K+</div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2 px-1">Elite Traders</div>
+            </div>
+            <div class="text-center border-t border-white/5 md:border-t-0 md:border-l pt-6 md:pt-0">
+                <div class="text-2xl sm:text-4xl font-bold">12ms</div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2 px-1">Avg. Execution</div>
+            </div>
+            <div class="text-center border-l border-white/5 border-t border-white/5 md:border-t-0 pt-6 md:pt-0">
+                <div class="text-2xl sm:text-4xl font-bold">24/7</div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest mt-2 px-1">Global Support</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Block Pair 1 (3 Reviews) -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100" class="glass p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-gold text-lg mb-4">★★★★★</div>
+                    <p class="text-gray-300 italic mb-6">"The user interface is futuristic and incredibly fast. I've switched all my high-frequency trading here."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">MV</div>
+                        <span class="ml-3 text-sm font-bold">Marcus V. | Quant Analyst</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="glass p-8 rounded-3xl border border-brand-gold/20">
+                    <div class="text-brand-gold text-lg mb-4">★★★★★</div>
+                    <p class="text-gray-300 italic mb-6">"Security is my #1 priority. Hashvests' multi-sig architecture gives me peace of mind I couldn't find elsewhere."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">ER</div>
+                        <span class="ml-3 text-sm font-bold">Elena R. | Crypto Fund Mgr</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="glass p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-gold text-lg mb-4">★★★★★</div>
+                    <p class="text-gray-300 italic mb-6">"Finally, a platform that doesn't lag during high volatility. The liquidity is deep and reliable."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">DK</div>
+                        <span class="ml-3 text-sm font-bold">David K. | Pro Forex Trader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Feature Section -->
+    <section class="py-32 bg-brand-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div data-aos="fade-right" class="lg:w-1/2">
+                    <h2 class="text-5xl font-bold mb-8 leading-tight">Master the Markets with Professional Precision</h2>
+                    <p class="text-xl text-gray-400 mb-10 font-light leading-relaxed">
+                        Watch our platform in action. See how institutional-grade tools and deep liquidity come together to give you the ultimate trading edge.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-4 py-2 glass rounded-lg text-sm border border-brand-gold/10">✓ 4000+ Assets</span>
+                        <span class="px-4 py-2 glass rounded-lg text-sm border border-brand-gold/10">✓ 0.0 Pip Spreads</span>
+                        <span class="px-4 py-2 glass rounded-lg text-sm border border-brand-gold/10">✓ Crypto-Direct Withdrawals</span>
+                    </div>
+                    <div class="mt-12">
+                        <a href="https://hashvests.com/register" target="_blank" class="inline-block px-10 py-4 bg-brand-gold text-black rounded-full font-bold hover:scale-105 transition">Register & Watch Live</a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-brand-gold/10 blur-3xl rounded-full"></div>
+                    <div class="relative glass rounded-[2rem] overflow-hidden shadow-2xl video-container border border-white/10">
+                        <video id="mainVideo" class="w-full h-full object-cover transition-all duration-700" muted loop playsinline poster="assets/hero.png">
+                            <source src="assets/presentation.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div id="videoOverlay" onclick="toggleVideo()" class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent flex flex-col items-center justify-center group cursor-pointer transition-all duration-500">
+                            <div id="playIcon" class="w-20 h-20 bg-brand-gold rounded-full flex items-center justify-center text-black text-3xl group-hover:scale-110 transition shadow-xl shadow-brand-gold/40">▶</div>
+                            <div id="pauseIcon" class="hidden w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-white text-3xl group-hover:scale-110 transition border border-white/20">⏸</div>
+                            <span id="videoStatus" class="mt-4 text-xs font-bold tracking-widest text-brand-gold uppercase opacity-60 group-hover:opacity-100 transition">Watch Presentation</span>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        let isStarted = false;
+
+                        function toggleVideo() {
+                            const video = document.getElementById('mainVideo');
+                            const overlay = document.getElementById('videoOverlay');
+                            const playIcon = document.getElementById('playIcon');
+                            const pauseIcon = document.getElementById('pauseIcon');
+                            const statusText = document.getElementById('videoStatus');
+                            
+                            if (!isStarted) {
+                                // First start: Brighten, restart, and unmute
+                                video.style.filter = "brightness(1) contrast(1)";
+                                video.currentTime = 0;
+                                video.muted = false;
+                                video.play();
+                                isStarted = true;
+                                
+                                // Update UI to "Playing" state
+                                playIcon.classList.add('hidden');
+                                pauseIcon.classList.remove('hidden');
+                                statusText.innerText = "Playing... Click to Pause";
+                                overlay.classList.remove('from-brand-dark/80');
+                                overlay.classList.add('from-brand-dark/20');
+                                overlay.style.opacity = "0"; // Hide overlay initially while playing
+                            } else {
+                                if (video.paused) {
+                                    video.play();
+                                    playIcon.classList.add('hidden');
+                                    pauseIcon.classList.remove('hidden');
+                                    statusText.innerText = "Playing... Click to Pause";
+                                    overlay.style.opacity = "0";
+                                } else {
+                                    video.pause();
+                                    playIcon.classList.remove('hidden');
+                                    playIcon.innerText = "▶";
+                                    pauseIcon.classList.add('hidden');
+                                    statusText.innerText = "Paused... Click to Resume";
+                                    overlay.style.opacity = "1";
+                                    overlay.classList.add('from-brand-dark/60');
+                                }
+                            }
+                        }
+
+                        // Also show overlay on hover if started
+                        document.getElementById('videoOverlay').addEventListener('mouseenter', () => {
+                            if (isStarted) {
+                                document.getElementById('videoOverlay').style.opacity = "1";
+                            }
+                        });
+                        document.getElementById('videoOverlay').addEventListener('mouseleave', () => {
+                            if (isStarted && !document.getElementById('mainVideo').paused) {
+                                document.getElementById('videoOverlay').style.opacity = "0";
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Gallery -->
+    <section class="py-32 bg-brand-surface relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 data-aos="fade-up" class="text-5xl font-bold mb-6">Real Results. Real Impact.</h2>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-gray-500 max-w-2xl mx-auto italic font-light">"Our mission is to democratize institutional-grade wealth generation for families across the globe."</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="zoom-in" data-aos-delay="100" class="group relative rounded-3xl overflow-hidden glass hover:shadow-[0_0_50px_rgba(212,175,55,0.1)] transition-all">
+                    <img src="assets/check1.jpg" alt="Hashvests Success" class="w-full h-[400px] object-cover grayscale-[0.5] group-hover:grayscale-0 transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 p-8">
+                        <h4 class="text-2xl font-bold mb-2">Financial Freedom</h4>
+                        <p class="text-sm text-gray-400">Join over 12,000 families who have achieved significant growth milestones this year.</p>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" class="group relative rounded-3xl overflow-hidden glass hover:shadow-[0_0_50px_rgba(212,175,55,0.1)] transition-all">
+                    <img src="assets/check2.jpg" alt="Hashvests Success" class="w-full h-[400px] object-cover grayscale-[0.5] group-hover:grayscale-0 transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 p-8">
+                        <h4 class="text-2xl font-bold mb-2">Global Trust</h4>
+                        <p class="text-sm text-gray-400">Awarded best institutional trading bridge for retail investors in 2025.</p>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="500" class="group relative rounded-3xl overflow-hidden glass hover:shadow-[0_0_50px_rgba(212,175,55,0.1)] transition-all">
+                    <img src="assets/check3.jpg" alt="Hashvests Success" class="w-full h-[400px] object-cover grayscale-[0.5] group-hover:grayscale-0 transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 p-8">
+                        <h4 class="text-2xl font-bold mb-2">Unmatched Performance</h4>
+                        <p class="text-sm text-gray-400">Our proprietary algorithms ensure you never miss a market move.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Block Pair 2 (3 Reviews) -->
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-left" data-aos-delay="100" class="glass p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-gold text-sm mb-4">★★★★★</div>
+                    <p class="text-md text-gray-300 italic mb-6">"The withdrawal process is seamless. I received my profits in less than 30 minutes. Unheard of in this industry."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">SL</div>
+                        <span class="ml-3 text-xs font-bold">Sarah L. | Techpreneur</span>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="200" class="glass p-8 rounded-3xl border border-brand-gold/20">
+                    <div class="text-brand-gold text-sm mb-4">★★★★★</div>
+                    <p class="text-md text-gray-300 italic mb-6">"Support is actually 24/7 and they know their stuff. No bots, just elite intelligence."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">JW</div>
+                        <span class="ml-3 text-xs font-bold">James W. | Private Equity</span>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="300" class="glass p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-gold text-sm mb-4">★★★★★</div>
+                    <p class="text-md text-gray-300 italic mb-6">"Using the referral program has been a game-changer for my community. The bonuses are real and transparent."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">MT</div>
+                        <span class="ml-3 text-xs font-bold">Michal T. | Influencer</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up" class="mt-16 text-center">
+                <a href="https://hashvests.com/register" target="_blank" class="inline-block px-8 sm:px-16 py-4 sm:py-6 bg-brand-gold text-black rounded-full font-black text-lg sm:text-2xl hover:scale-110 active:scale-95 transition-all shadow-2xl">BECOME OUR NEXT SUCCESS STORY</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Features Grid -->
+    <section class="py-32">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                 <div data-aos="fade-right" class="p-12 glass rounded-[3rem] border border-white/5">
+                     <div class="text-4xl mb-6">🏛️</div>
+                     <h3 class="text-3xl font-bold mb-4">Institutional Brokerage Tech</h3>
+                     <p class="text-gray-400 leading-relaxed mb-8">We provide the same technology used by top-tier investment banks. Experience the same speed, reliability, and precision as the pros.</p>
+                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Tech" class="rounded-2xl h-64 w-full object-cover">
+                 </div>
+                 <div data-aos="fade-left" class="p-12 glass rounded-[3rem] border border-brand-gold/10">
+                     <div class="text-4xl mb-6">🛡️</div>
+                     <h3 class="text-3xl font-bold mb-4">Unrivaled Asset Protection</h3>
+                     <p class="text-gray-400 leading-relaxed mb-8">Multi-sig wallets, cold storage architecture, and continuous audits ensure your assets are guarded 24/7/365.</p>
+                     <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" alt="Security" class="rounded-2xl h-64 w-full object-cover">
+                 </div>
+            </div>
+            
+            <!-- Review Block Pair 3 (3 Reviews) -->
+            <div class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="zoom-in" data-aos-delay="100" class="glass p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-gold text-sm mb-4">★★★★★</div>
+                    <p class="text-md text-gray-300 italic mb-6">"Best institutional bridge for retail investors I've ever used. 10/10."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">KB</div>
+                        <span class="ml-3 text-xs font-bold">Kevin B. | Day Trader</span>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="glass p-8 rounded-3xl border border-brand-gold/20">
+                    <div class="text-brand-gold text-sm mb-4">★★★★★</div>
+                    <p class="text-md text-gray-300 italic mb-6">"The market access is staggering. I can trade everything from one dashboard."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">AP</div>
+                        <span class="ml-3 text-xs font-bold">Anita P. | Portfolio Mgr</span>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" class="glass p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-gold text-sm mb-4">★★★★★</div>
+                    <p class="text-md text-gray-300 italic mb-6">"Hashvests is the gold standard for modern wealth management."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold font-bold text-xs">RD</div>
+                        <span class="ml-3 text-xs font-bold">Robert D. | Wealth Consultant</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA Middle -->
+            <div data-aos="zoom-in" class="mt-20 text-center py-20 bg-gradient-to-r from-brand-gold/10 to-transparent rounded-[4rem] border border-brand-gold/10 px-6">
+                <h2 class="text-4xl sm:text-5xl font-black mb-8">READY TO DEPOSIT?</h2>
+                <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-xl mx-auto">Join the 49,600+ traders moving to the future of finance. Instant verification and quick funding.</p>
+                <a href="https://hashvests.com/register" target="_blank" class="inline-block px-12 sm:px-16 py-4 sm:py-6 bg-brand-gold text-black rounded-full font-black text-xl sm:text-2xl hover:scale-110 transition shadow-2xl uppercase">Create Account</a>
+                
+                <p data-aos="fade-up" class="mt-12 text-sm text-gray-500 italic">"Hashvests is the only platform that truly understands the needs of modern digital investors." — Global Finance Review</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 text-center md:text-left">
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6 justify-center md:justify-start">
+                        <div class="w-10 h-10 bg-brand-gold rounded-xl flex items-center justify-center font-bold text-black text-xl">H</div>
+                        <span class="text-2xl font-bold">Hashvests</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Redefining institutional investment for the modern world since 2011. Built on elite tech, speed, and absolute security.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6 uppercase text-[10px] tracking-widest text-brand-gold">Communities</h5>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="https://t.me/hashvests_inc" target="_blank" class="hover:text-white transition text-glow">Telegram Official</a></li>
+                        <li><a href="https://whatsapp.com/channel/0029VbBYTNH7NoZsALUaSx28" target="_blank" class="hover:text-white transition">WhatsApp Channel</a></li>
+                        <li><a href="https://linktr.ee/hashvestsinc" target="_blank" class="hover:text-white transition">Linktree Contacts</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6 uppercase text-[10px] tracking-widest text-brand-gold">Connect</h5>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="https://x.com/hashvests_inc" target="_blank" class="hover:text-white transition">Twitter (X)</a></li>
+                        <li><a href="https://www.tiktok.com/@hashvests_inc" target="_blank" class="hover:text-white transition">TikTok Updates</a></li>
+                        <li><a href="https://www.facebook.com/hashvestsinc" target="_blank" class="hover:text-white transition">Facebook Page</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6 uppercase text-[10px] tracking-widest text-brand-gold">Support</h5>
+                    <p class="text-white font-bold mb-2">info@hashvests.com</p>
+                    <p class="text-gray-500 text-sm">24/7 Priority Intelligence Core</p>
+                    <a href="https://hashvests.com/register" target="_blank" class="mt-6 inline-block px-6 py-2 bg-white/5 rounded-full text-xs font-bold hover:bg-white/10 transition uppercase">Help Center</a>
+                </div>
+            </div>
+            
+            <div data-aos="fade" class="border-t border-white/5 pt-12 text-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p class="mb-4">© 2026 Hashvests Inc. | Incorporated & Regulated Professional Services</p>
+                <div class="flex justify-center space-x-8">
+                    <button onclick="openModal('terms')" class="hover:text-white transition cursor-pointer">Terms & Conditions</button>
+                    <button onclick="openModal('risk')" class="hover:text-white transition cursor-pointer">Risk Disclosure</button>
+                    <button onclick="openModal('privacy')" class="hover:text-white transition cursor-pointer">Privacy Architecture</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legal Modal System -->
+    <div id="legalModal" class="fixed inset-0 z-[1000000] hidden flex items-center justify-center p-6 sm:p-12 overflow-hidden transition-all duration-500">
+        <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-xl" onclick="closeModal()"></div>
+        <div class="relative glass rounded-[3rem] w-full max-w-2xl max-h-[80vh] overflow-y-auto p-10 sm:p-16 border border-brand-gold/10 transform transition-all duration-500 scale-95 opacity-0" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-500 hover:text-white transition text-3xl">&times;</button>
+            <h2 id="modalTitle" class="text-3xl font-bold mb-8 text-brand-gold">Section Title</h2>
+            <div id="modalBody" class="text-gray-400 leading-relaxed space-y-6 text-lg">
+                <!-- Content injected here -->
+            </div>
+            <div class="mt-12 pt-8 border-t border-white/5">
+                <button onclick="closeModal()" class="w-full py-4 bg-white/5 rounded-full font-bold hover:bg-white/10 transition">Close Agreement</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modalData = {
+            terms: {
+                title: "Terms & Conditions",
+                content: "By accessing Hashvests Inc, you agree to our terms of service. Users must be of legal age, provide accurate information, and are responsible for all activities under their account. We provide institutional trading technology but are not responsible for individual trading decisions or market performance. We reserve the right to terminate accounts for any breach of these terms."
+            },
+            risk: {
+                title: "Risk Disclosure",
+                content: "Trading financial assets involves significant risk. Markets are volatile and unpredictable. Leverage can magnify both gains and losses. You may lose all or part of your capital. Only invest money you can afford to lose. Past performance does not guarantee future results. Consultation with a certified financial advisor is recommended before making significant investment decisions."
+            },
+            privacy: {
+                title: "Privacy Architecture",
+                content: "Our security architecture follows a zero-trust model. All sensitive data is encrypted with AES-256. User assets are stored in multi-sig cold wallets for maximum protection against unauthorized access. We comply with global data protection standards (GDPR/CCPA) and never sell your personal information to third parties. Continuous audits ensure 100% architectural integrity."
+            }
+        };
+
+        function openModal(type) {
+            const modal = document.getElementById('legalModal');
+            const contentBox = document.getElementById('modalContent');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            
+            const data = modalData[type];
+            title.innerText = data.title;
+            body.innerText = data.content;
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                contentBox.classList.remove('scale-95', 'opacity-0');
+                contentBox.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('legalModal');
+            const contentBox = document.getElementById('modalContent');
+            
+            contentBox.classList.remove('scale-100', 'opacity-100');
+            contentBox.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Close on ESC
+        window.addEventListener('keydown', (e) => {
+            if(e.key === "Escape") closeModal();
+        });
+    </script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-quint'
+        });
+    </script>
+    
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        
+        // Custom styling to fix mobile margin crossing - increased for safer bounds
+        Tawk_API.customStyle = {
+            visibility : {
+                desktop : { xOffset : 20, yOffset : 20 },
+                mobile : { xOffset : 30, yOffset : 60 } // High Y offset to avoid collision with nav bars
+            }
+        };
+
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/69080e524f905f194d5d5986/1j93nfstu';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!-- End of Tawk.to Script -->
+
+</body>
+</html>
